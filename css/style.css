@@ -175,9 +175,9 @@ main {
     width: 100%;
     position: absolute;
     left: 50%;
-    top: calc(50% - 3rem);
-    -webkit-transform: translate(-50%, calc(-50% - 3rem));
-            transform: translate(-50%, calc(-50% - 3rem));
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -185,6 +185,9 @@ main {
   main {
     padding: 6rem;
     margin: 6rem 0;
+    top: calc(50% - 3rem);
+    -webkit-transform: translate(-50%, calc(-50% - 3rem));
+            transform: translate(-50%, calc(-50% - 3rem));
   }
 }
 
