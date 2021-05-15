@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $body;
+  font-size: $_16px;
+  line-height: 1.54;
+  letter-spacing: -0.3px;
+  cursor: none;
+  background-color: $grey;
+  color: $dark;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+  cursor: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.flex {
+  display: flex;
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-fd-c {
+    flex-direction: column;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-fe {
+    justify-content: flex-end;
+  }
+  &-jc-sa {
+    justify-content: space-around;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-ai-fe {
+    align-items: flex-end;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+// .overflow {
+//   overflow: hidden;
+// }
+
+// .about_show,
+// .about_show_desktop,
+// .showcase_reveal {
+//   transform: translateY(100%);
+
+//   transition: all 1s ease;
+// }
+
+.hide-for-mobile {
+  @include breakpoint-down(iPadPro) {
+    display: none;
+  }
+}
+
+.hide-for-phone {
+  @include breakpoint-down(tablet) {
+    display: none;
+  }
+}
+
+.show-above-phone {
+  @include breakpoint-up(tablet) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(iPadPro) {
+    display: none;
+  }
+}
+
+main {
+  transition: all 0.8s;
+}
+
+.no_scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.menu-open {
+  transform: translateX(-100%);
+}

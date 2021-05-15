@@ -1,0 +1,134 @@
+.oPorto {
+  padding: 7.5vh 2rem 5vh;
+
+  h1 {
+    font-size: $_70px;
+    line-height: 1;
+    font-weight: 500;
+
+    margin: 0 2rem 0 0;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: $_20px;
+  }
+
+  p {
+    margin: 0;
+
+    font-size: $_18px;
+
+    &:last-child {
+      margin-top: 0.3rem;
+    }
+  }
+
+  &_forecast {
+    margin-top: 5vh;
+    grid-template-columns: repeat(4, 1fr);
+    // column-gap: 1rem;
+    row-gap: 2rem;
+  }
+}
+
+.cityWeather {
+  padding: 5vh 2rem;
+
+  background-color: $grey2;
+
+  form {
+    input {
+      width: 100%;
+
+      padding: 0.75rem 1rem;
+      background-color: transparent;
+      border-radius: 4px;
+
+      border: 1px solid rgba($color: $dark, $alpha: 0.5);
+
+      ::placeholder {
+        font-family: $body;
+      }
+
+      &#searchBtn {
+        margin-top: 2rem;
+
+        background-color: $grey;
+        font-family: $body;
+
+        font-weight: 500;
+        font-size: $_15px;
+        border: 1px solid rgba($color: $grey2, $alpha: 1);
+      }
+    }
+  }
+
+  #cityWeatherStatus,
+  #forecastStatus {
+    text-align: center;
+  }
+
+  &_info {
+    h1 {
+      margin: 5vh 0 0;
+      font-size: $_22px;
+      text-align: center;
+      line-height: 1;
+    }
+
+    hr {
+      width: 80%;
+      border: none;
+      height: 1px;
+      background-color: rgba($color: $dark, $alpha: 0.2);
+
+      margin: 5vh auto;
+    }
+
+    &_details {
+      h1 {
+        font-size: $_50px;
+        line-height: 1;
+        font-weight: 500;
+
+        margin: 0 2rem 0 0;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: $_18px;
+        font-weight: 100;
+      }
+
+      p {
+        margin: 0;
+
+        font-size: $_18px;
+      }
+    }
+
+    h3 {
+      margin: 5vh 0 0;
+      font-size: $_20px;
+      text-align: center;
+      line-height: 1;
+    }
+  }
+
+  &_forecast {
+    margin-top: 5vh;
+    grid-template-columns: repeat(4, 1fr);
+    // column-gap: 1rem;
+    row-gap: 2rem;
+  }
+}
+
+svg {
+  width: 18px;
+  margin-right: 0.5rem;
+
+  &:last-child {
+    transform: translateY(-7.5%);
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <header class="flex flex-ai-c flex-jc-sb">
+      <h3 id="myCity"></h3>
+      <h3 id="currentDate"></h3>
+    </header>
+
+    <main>
+      <section class="oPorto flex flex-ai-c flex-jc-c flex-fd-c">
+        <div class="flex flex-ai-fs">
+          <div>
+            <h1 id="portoTemp"></h1>
+            <h2 id="portoDesc"></h2>
+          </div>
+
+          <div>
+            <p class="flex flex-ai-c" id="portoWindSpeed"></p>
+            <p class="flex flex-ai-c" id="portoHumidity"></p>
+          </div>
+        </div>
+
+        <div class="oPorto_forecast grid">
+          <!-- <div class="oPorto_forecast_card">
+            <h3>Today</h3>
+            <h2>20°</h2>
+            <p>Sunny</p>
+          </div>
+          <div class="oPorto_forecast_card">
+            <h3>Today</h3>
+            <h2>20°</h2>
+            <p>Sunny</p>
+          </div>
+          <div class="oPorto_forecast_card">
+            <h3>Today</h3>
+            <h2>20°</h2>
+            <p>Sunny</p>
+          </div>
+          <div class="oPorto_forecast_card">
+            <h3>Today</h3>
+            <h2>20°</h2>
+            <p>Sunny</p>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="cityWeather flex flex-ai-c flex-jc-c flex-fd-c">
+        <form id="weatherForm">
+          <input
+            type="text"
+            id="cityTxt"
+            placeholder="Search city weather..."
+          />
+          <br />
+          <input type="submit" id="searchBtn" value="Search" />
+        </form>
+
+        <div class="cityWeather_info">
+          <h1 id="cityResultName">No city researched</h1>
+
+          <hr />
+
+          <p id="cityWeatherStatus"></p>
+
+          <div class="cityWeather_info_details flex flex-ai-fs flex-jc-c">
+            <div>
+              <h1 id="cityResultTemp"></h1>
+              <h2 id="cityResultDesc"></h2>
+            </div>
+
+            <div>
+              <p class="flex flex-ai-c" id="cityResultWindSpeed"></p>
+              <p class="flex flex-ai-c" id="cityResultHumidity"></p>
+            </div>
+          </div>
+
+          <hr />
+
+          <h3>Hourly Forecast</h3>
+
+          <p id="forecastStatus"></p>
+
+          <div class="cityWeather_forecast grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
