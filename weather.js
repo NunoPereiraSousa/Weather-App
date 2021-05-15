@@ -82,8 +82,10 @@ function portoWeather() {
       // temperature °
       let temp = Math.round(res.data.current.temp);
 
+      console.log(res.data);
+
       portoTemp.innerHTML = `
-      ${temp}°C`;
+      ${temp}°`;
 
       // wind speed
       let wind = Math.round(res.data.current.wind_speed);
@@ -111,7 +113,7 @@ function portoWeather() {
       </svg> ${wind} km/ h.`;
 
       // desc
-      let desc = res.data.current.weather[0].description;
+      let desc = res.data.current.weather[0].main;
 
       // description first letter uppercase
       desc = desc[0].toUpperCase() + desc.slice(1);
@@ -336,7 +338,7 @@ async function forecast() {
       ${humidity}%.`;
 
       // desc
-      let desc = res.data.current.weather[0].description;
+      let desc = res.data.current.weather[0].main;
       desc = desc[0].toUpperCase() + desc.slice(1);
       cityResultDesc.innerHTML = desc;
 

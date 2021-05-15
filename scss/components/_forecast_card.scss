@@ -9,16 +9,47 @@
     border-right: none;
   }
 
+  @include breakpoint-up(tablet) {
+    padding: 1rem 2.4rem 0;
+  }
+
   h3 {
     margin: 0;
 
     font-size: $_16px;
+
+    @include breakpoint-up(tablet) {
+      font-size: $_22px;
+    }
+
+    @include breakpoint-up(desktop) {
+      font-size: $_16px;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: $_20px;
+      font-weight: 500;
+    }
   }
 
   h2 {
     font-size: $_15px;
 
     margin: 0.6rem 0;
+
+    @include breakpoint-up(tablet) {
+      font-size: $_20px;
+      margin: 2rem 0;
+    }
+
+    @include breakpoint-up(desktop) {
+      margin: 1.5rem 0 0.4rem;
+      font-size: $_30px;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: $_40px;
+    }
   }
 
   p {
@@ -28,5 +59,43 @@
 
   img {
     width: 36px;
+
+    @include breakpoint-up(tablet) {
+      width: 50px;
+    }
+
+    @include breakpoint-up(desktop) {
+      width: 36px;
+    }
+
+    @include breakpoint-up(large) {
+      width: 50px;
+    }
+  }
+}
+
+.cityWeather_forecast_card {
+  h3 {
+    @include breakpoint-up(desktop) {
+      font-size: $_15px;
+    }
+  }
+
+  h2 {
+    @include breakpoint-up(desktop) {
+      margin: 1.5rem 0 0.4rem;
+      font-size: $_24px;
+    }
+  }
+
+  p {
+    font-size: $_14px;
+    margin: 0;
+  }
+
+  img {
+    @include breakpoint-up(desktop) {
+      width: 30px;
+    }
   }
 }

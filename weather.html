@@ -15,13 +15,18 @@
     <title>Weather</title>
   </head>
   <body>
-    <header class="flex flex-ai-c flex-jc-sb">
+    <header class="flex flex-ai-c flex-jc-sb hide-for-desktop">
       <h3 id="myCity"></h3>
       <h3 id="currentDate"></h3>
     </header>
 
-    <main>
+    <main class="grid">
       <section class="oPorto flex flex-ai-c flex-jc-c flex-fd-c">
+        <!-- <header class="flex flex-ai-c flex-jc-sb hide-for-mobile">
+          <h3 id="myCity"></h3>
+          <h3 id="currentDate"></h3>
+        </header> -->
+
         <div class="flex flex-ai-fs">
           <div>
             <h1 id="portoTemp"></h1>
@@ -59,13 +64,9 @@
       </section>
 
       <section class="cityWeather flex flex-ai-c flex-jc-c flex-fd-c">
-        <form id="weatherForm">
-          <input
-            type="text"
-            id="cityTxt"
-            placeholder="Search city weather..."
-          />
-          <br />
+        <form id="weatherForm" class="grid">
+          <input type="text" id="cityTxt" placeholder="Search city..." />
+          <br class="hide-for-desktop" />
           <input type="submit" id="searchBtn" value="Search" />
         </form>
 
