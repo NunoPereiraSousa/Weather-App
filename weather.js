@@ -82,8 +82,6 @@ function portoWeather() {
       // temperature °
       let temp = Math.round(res.data.current.temp);
 
-      console.log(res.data);
-
       portoTemp.innerHTML = `
       ${temp}°`;
 
@@ -117,7 +115,7 @@ function portoWeather() {
 
       // description first letter uppercase
       desc = desc[0].toUpperCase() + desc.slice(1);
-      portoDesc.innerHTML = desc;
+      portoDesc.innerHTML = `oPorto: ${desc}.`;
 
       // humidity %
       let humidity = Math.round(res.data.current.humidity);

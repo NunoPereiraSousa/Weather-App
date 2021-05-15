@@ -17,6 +17,7 @@
     margin: 0;
 
     font-size: $_16px;
+    font-weight: 500;
 
     @include breakpoint-up(tablet) {
       font-size: $_22px;
@@ -36,6 +37,7 @@
     font-size: $_15px;
 
     margin: 0.6rem 0;
+    font-weight: 400;
 
     @include breakpoint-up(tablet) {
       font-size: $_20px;

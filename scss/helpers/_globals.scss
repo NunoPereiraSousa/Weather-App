@@ -23,6 +23,12 @@ body {
   }
 }
 
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+
 a,
 a:visited,
 a:hover,
